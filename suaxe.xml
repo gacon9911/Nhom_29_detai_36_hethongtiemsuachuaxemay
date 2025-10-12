@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Garage SYSTEM "suaxe.dtd">
+<Garage>
+  <!-- Khách hàng -->
+  <KhachHangs>
+    <KhachHang>
+      <MaKhachHangID>KH001</MaKhachHangID>
+      <Ten>Nguyễn Văn Trí</Ten>
+      <SoDienThoai>0988123456</SoDienThoai>
+      <DiaChi>12 Lê Lợi, HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH002</MaKhachHangID>
+      <Ten>Trần Thị Ngọc </Ten>
+      <SoDienThoai>0912345678</SoDienThoai>
+      <DiaChi>45 Trần Hưng Đạo, HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH003</MaKhachHangID>
+      <Ten>Triệu Ngọc Ánh</Ten>
+      <SoDienThoai>0912343299</SoDienThoai>
+      <DiaChi>36 Nguyễn Trãi,HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH004</MaKhachHangID>
+      <Ten>Lư Bảo Ngọc</Ten>
+      <SoDienThoai>0923889112</SoDienThoai>
+      <DiaChi>12 Nguyễn Văn Linh, HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH005</MaKhachHangID>
+      <Ten>Nguyễn Hữu Khang</Ten>
+      <SoDienThoai>0702339887</SoDienThoai>
+      <DiaChi>10 Phạm Ngũ Lão, HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH006</MaKhachHangID>
+      <Ten>Phan Hoàng Nam</Ten>
+      <SoDienThoai>0808373994</SoDienThoai>
+      <DiaChi>20 Nguyễn Việt Hồng, HCM</DiaChi>
+    </KhachHang>
+    <KhachHang>
+      <MaKhachHangID>KH007</MaKhachHangID>
+      <Ten>Lê Văn Tuấn</Ten>
+      <SoDienThoai>0909112567</SoDienThoai>
+      <DiaChi>176 Trần Ngọc Quế, HCM</DiaChi>
+    </KhachHang>
+  </KhachHangs>
+
+  <!-- Xe máy -->
+  <XeMays>
+    <XeMay>
+      <MaXeMayID>XM100</MaXeMayID>
+      <Hang>Honda</Hang>
+      <Mau>Đen</Mau>
+      <NamSanXuat>2019</NamSanXuat>
+      <MaKhachHangID>KH001</MaKhachHangID>
+    </XeMay>
+    <XeMay>
+      <MaXeMayID>XM101</MaXeMayID>
+      <Hang>Yamaha</Hang>
+      <Mau>Trắng</Mau>
+      <NamSanXuat>2021</NamSanXuat>
+      <MaKhachHangID>KH002</MaKhachHangID>
+    </XeMay>
+     <XeMay>
+      <MaXeMayID>XM102</MaXeMayID>
+      <Hang>Vision</Hang>
+      <Mau>Đỏ</Mau>
+      <NamSanXuat>2023</NamSanXuat>
+      <MaKhachHangID>KH003</MaKhachHangID>
+    </XeMay>
+     <XeMay>
+      <MaXeMayID>XM103</MaXeMayID>
+      <Hang>Wave Alpha</Hang>
+      <Mau>Xám</Mau>
+      <NamSanXuat>2023</NamSanXuat>
+      <MaKhachHangID>KH004</MaKhachHangID>
+    </XeMay>
+     <XeMay>
+      <MaXeMayID>XM104</MaXeMayID>
+      <Hang>Yamaha</Hang>
+      <Mau>Đen</Mau>
+      <NamSanXuat>2024</NamSanXuat>
+      <MaKhachHangID>KH005</MaKhachHangID>
+    </XeMay>
+     <XeMay>
+      <MaXeMayID>XM105</MaXeMayID>
+      <Hang>Suzuki</Hang>
+      <Mau>Trắng</Mau>
+      <NamSanXuat>2022</NamSanXuat>
+      <MaKhachHangID>KH006</MaKhachHangID>
+    </XeMay>
+     <XeMay>
+      <MaXeMayID>XM106</MaXeMayID>
+      <Hang>Honda</Hang>
+      <Mau>Trắng</Mau>
+      <NamSanXuat>2021</NamSanXuat>
+      <MaKhachHangID>KH007</MaKhachHangID>
+    </XeMay>
+  </XeMays>
+
+  <!-- Kỹ thuật viên -->
+  <KyThuatViens>
+    <KyThuatVien>
+      <MaNhanVienID>NV01</MaNhanVienID>
+      <Ten>Lê Văn Khang</Ten>
+      <KyNang>Sửa chữa, thay thế phụ tùng xe máy</KyNang> 
+      <SoDienThoai>0903222111</SoDienThoai>
+      <DiaChi>100 Nguyễn Trãi, HCM</DiaChi>
+      <MucLuong>8000000</MucLuong>
+      <ViTri>Trưởng nhóm</ViTri>
+    </KyThuatVien>
+    <KyThuatVien>
+      <MaNhanVienID>NV02</MaNhanVienID>
+      <Ten>Phạm Văn Mơ</Ten>
+      <KyNang>Sửa chữa và bảo dưỡng động cơ xe máy</KyNang>
+      <SoDienThoai>0904111222</SoDienThoai>
+      <DiaChi>200 Võ Văn Kiệt, HCM</DiaChi>
+      <MucLuong>6000000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+    <KyThuatVien>
+      <MaNhanVienID>NV03</MaNhanVienID>
+      <Ten>Nguyễn Văn Tài</Ten>
+      <KyNang>Sửa chữa hệ thống điện và thay thế phụ tùng xe máy</KyNang>
+      <SoDienThoai>0905333444</SoDienThoai>
+      <DiaChi>15 Trường Chinh, HCM</DiaChi>
+      <MucLuong>6500000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+
+    <KyThuatVien>
+      <MaNhanVienID>NV04</MaNhanVienID>
+      <Ten>Trần Minh Nhật</Ten>
+      <KyNang>Kiểm tra xử lý lỗi và thay thế linh kiện</KyNang>
+      <SoDienThoai>0905666777</SoDienThoai>
+      <DiaChi>88 Lê Văn Sỹ, HCM</DiaChi>
+      <MucLuong>6200000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+
+    <KyThuatVien>
+      <MaNhanVienID>NV05</MaNhanVienID>
+      <Ten>Đỗ Văn Hùng</Ten>
+      <KyNang>Bảo dưỡng định kỳ và thay thế linh kiện bên ngoài</KyNang>
+      <SoDienThoai>0905999888</SoDienThoai>
+      <DiaChi>42 Nguyễn Thị Minh Khai, HCM</DiaChi>
+      <MucLuong>6700000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+
+    <KyThuatVien>
+      <MaNhanVienID>NV06</MaNhanVienID>
+      <Ten>Lê Quốc Bảo</Ten>
+      <KyNang>Bảo dưỡng định kỳ và thay thế linh kiện bên ngoài</KyNang>
+      <SoDienThoai>0906000111</SoDienThoai>
+      <DiaChi>120 Cách Mạng Tháng 8, HCM</DiaChi>
+      <MucLuong>6800000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+
+    <KyThuatVien>
+      <MaNhanVienID>NV07</MaNhanVienID>
+     <Ten>Võ Thanh Phong</Ten>
+      <KyNang>Chuẩn đoán lỗi bằng thiết bị điện tử</KyNang>
+      <SoDienThoai>0906444555</SoDienThoai>
+      <DiaChi>33 Phan Đăng Lưu, HCM</DiaChi>
+      <MucLuong>7000000</MucLuong>
+      <ViTri>Kỹ Thuật Viên</ViTri>
+    </KyThuatVien>
+  </KyThuatViens>
+
+  
+  <PhuTungXeMays>
+    <PhuTungXeMay>
+      <MaPhuTungID>PT001</MaPhuTungID>
+      <MoTa>Bugi Denso Iridium Power IU22</MoTa>
+      <Gia>280000</Gia>
+      <!-- liên kết 1-n với ChiTietPhieu (nếu có). Có thể rỗng nếu chưa gắn -->
+    </PhuTungXeMay>
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT002</MaPhuTungID>
+      <MoTa>Bộ Nhông Xích Truyền Động YaMaHa</MoTa>
+      <Gia>210000</Gia>
+    </PhuTungXeMay> 
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT003</MaPhuTungID>
+      <MoTa>Lốp xe trước IRC</MoTa>
+      <Gia>450000</Gia>
+    </PhuTungXeMay>
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT004</MaPhuTungID>
+      <MoTa>Ống xả Inox</MoTa>
+      <Gia>800000</Gia>
+    </PhuTungXeMay>
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT005</MaPhuTungID>
+      <MoTa>Gương chiếu hậu</MoTa>
+      <Gia>200000</Gia>
+    </PhuTungXeMay>
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT006</MaPhuTungID>
+      <MoTa>Yên xe thể thao SuZuKi </MoTa>
+      <Gia>600000</Gia>
+    </PhuTungXeMay>
+
+    <PhuTungXeMay>
+      <MaPhuTungID>PT007</MaPhuTungID>
+      <MoTa>Thắng đùm sau</MoTa>
+      <Gia>100000</Gia>
+    </PhuTungXeMay>
+  </PhuTungXeMays>
+
+ 
+  <DichVus>
+    <DichVu>
+      <MaDichVuID>DV01</MaDichVuID>
+      <TenDichVu>Thay bugi</TenDichVu>
+      <MoTa>Thay bugi mới</MoTa>
+      <Gia>30000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>KhuyenMai:10%</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV02</MaDichVuID>
+      <TenDichVu>Thay nhông sên </TenDichVu>
+      <MoTa>Thay mới nhông sên</MoTa>
+      <Gia>40000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>Không khuyến mãi</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV03</MaDichVuID>
+      <TenDichVu>Thay lớp xe </TenDichVu>
+      <MoTa>Thay mới lốp xe</MoTa>
+      <Gia>40000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>KhuyenMai:10%</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV04</MaDichVuID>
+      <TenDichVu>Thay ống xả </TenDichVu>
+      <MoTa>Thay ống xả mới</MoTa>
+      <Gia>50000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>Không khuyến mãi</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV05</MaDichVuID>
+      <TenDichVu>Lắp gương chiếu hậu</TenDichVu>
+      <MoTa>Lắp gương chiếu hậu mới</MoTa>
+      <Gia>10000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>Không khuyến mãi</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV06</MaDichVuID>
+      <TenDichVu>Thay yên xe</TenDichVu>
+      <MoTa>Thay yên xe mới</MoTa>
+      <Gia>40000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>KhuyenMai:10%</TrangThai>
+    </DichVu>
+
+    <DichVu>
+      <MaDichVuID>DV07</MaDichVuID>
+      <TenDichVu>Lắp thắng </TenDichVu>
+      <MoTa>Tháo lắp thắng phanh</MoTa>
+      <Gia>30000</Gia>
+      <LoaiDichVu>Sửa chữa</LoaiDichVu>
+      <TrangThai>Không khuyến mãi</TrangThai>
+    </DichVu>
+  </DichVus>
+
+  <!-- Phiếu sửa chữa -->
+  <PhieuSuaChuas>
+    <PhieuSuaChua>
+      <MaPhieuID>PH001</MaPhieuID>
+      <MaNhanVienID>NV01</MaNhanVienID>
+      <MaXeMayID>XM100</MaXeMayID>
+    </PhieuSuaChua>
+
+    <PhieuSuaChua>
+      <MaPhieuID>PH002</MaPhieuID>
+      <MaNhanVienID>NV02</MaNhanVienID>
+      <MaXeMayID>XM101</MaXeMayID>
+    </PhieuSuaChua>
+    <PhieuSuaChua>
+      <MaPhieuID>PH003</MaPhieuID>
+      <MaNhanVienID>NV03</MaNhanVienID>
+      <MaXeMayID>XM102</MaXeMayID>
+    </PhieuSuaChua>
+    <PhieuSuaChua>
+      <MaPhieuID>PH004</MaPhieuID>
+      <MaNhanVienID>NV04</MaNhanVienID>
+      <MaXeMayID>XM103</MaXeMayID>
+    </PhieuSuaChua>
+
+    <PhieuSuaChua>
+      <MaPhieuID>PH005</MaPhieuID>
+      <MaNhanVienID>NV05</MaNhanVienID>
+      <MaXeMayID>XM104</MaXeMayID>
+    </PhieuSuaChua>
+
+    <PhieuSuaChua>
+      <MaPhieuID>PH006</MaPhieuID>
+      <MaNhanVienID>NV06</MaNhanVienID>
+      <MaXeMayID>XM105</MaXeMayID>
+    </PhieuSuaChua>
+
+    <PhieuSuaChua>
+      <MaPhieuID>PH007</MaPhieuID>
+      <MaNhanVienID>NV07</MaNhanVienID>
+      <MaXeMayID>XM106</MaXeMayID>
+    </PhieuSuaChua>
+  </PhieuSuaChuas>
+
+  <!-- Chi tiết phiếu sửa chữa (1–1 với PhieuSuaChua, thêm MaDichVu liên kết tới DichVu) -->
+  <ChiTietPhieuSuaChuas>
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH001</MaPhieuID>
+      <TongGiaTri>307000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT001</MaPhuTung>
+      <MaDichVu>DV01</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH002</MaPhieuID>
+      <TongGiaTri>250000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT002</MaPhuTung>
+      <MaDichVu>DV02</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH003</MaPhieuID>
+      <TongGiaTri>486000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT003</MaPhuTung>
+      <MaDichVu>DV03</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH004</MaPhieuID>
+      <TongGiaTri>850000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT004</MaPhuTung>
+      <MaDichVu>DV04</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH005</MaPhieuID>
+      <TongGiaTri>250000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT005</MaPhuTung>
+      <MaDichVu>DV05</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH006</MaPhieuID>
+      <TongGiaTri>636000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT006</MaPhuTung>
+      <MaDichVu>DV06</MaDichVu>
+    </ChiTietPhieuSuaChua>
+
+    <ChiTietPhieuSuaChua>
+      <MaPhieuID>PH007</MaPhieuID>
+      <TongGiaTri>130000</TongGiaTri>
+      <SoLuongPhuTung>1</SoLuongPhuTung>
+      <MaPhuTung>PT007</MaPhuTung>
+      <MaDichVu>DV07</MaDichVu>
+    </ChiTietPhieuSuaChua>
+  </ChiTietPhieuSuaChuas>
+
+</Garage>

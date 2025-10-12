@@ -1,0 +1,54 @@
+<!ELEMENT Garage (KhachHangs, XeMays, KyThuatViens, PhuTungXeMays, DichVus, PhieuSuaChuas, ChiTietPhieuSuaChuas)>
+
+<!-- Khách hàng -->
+<!ELEMENT KhachHangs (KhachHang*)> <!-- phần tử này chỉ chứa dữ liệu dạng text (được parser XML hiểu và xử lý, chứ không phải nhị phân hoặc thô-->
+<!ELEMENT KhachHang (MaKhachHangID, Ten, SoDienThoai, DiaChi)>
+<!ELEMENT MaKhachHangID (#PCDATA)>
+<!ELEMENT Ten (#PCDATA)>
+<!ELEMENT SoDienThoai (#PCDATA)>
+<!ELEMENT DiaChi (#PCDATA)>
+
+<!-- Xe máy -->
+<!ELEMENT XeMays (XeMay*)>
+<!ELEMENT XeMay (MaXeMayID, Hang, Mau, NamSanXuat, MaKhachHangID)>
+<!ELEMENT MaXeMayID (#PCDATA)>
+<!ELEMENT Hang (#PCDATA)>
+<!ELEMENT Mau (#PCDATA)>
+<!ELEMENT NamSanXuat (#PCDATA)>
+
+<!-- Kỹ thuật viên -->
+<!ELEMENT KyThuatViens (KyThuatVien*)>
+<!ELEMENT KyThuatVien (MaNhanVienID, Ten, KyNang, SoDienThoai, DiaChi, MucLuong, ViTri)>
+<!ELEMENT MaNhanVienID (#PCDATA)>
+<!ELEMENT KyNang (#PCDATA)>
+<!ELEMENT MucLuong (#PCDATA)>
+<!ELEMENT ViTri (#PCDATA)>
+
+<!-- Phụ tùng -->
+<!ELEMENT PhuTungXeMays (PhuTungXeMay*)>
+<!ELEMENT PhuTungXeMay (MaPhuTungID, MoTa, Gia)>
+<!ELEMENT MaPhuTungID (#PCDATA)>
+<!ELEMENT MoTa (#PCDATA)>
+<!ELEMENT Gia (#PCDATA)>
+
+<!-- Dịch vụ -->
+<!ELEMENT DichVus (DichVu*)>
+<!ELEMENT DichVu (MaDichVuID, TenDichVu, MoTa, Gia, LoaiDichVu, TrangThai)>
+<!ELEMENT MaDichVuID (#PCDATA)>
+<!ELEMENT TenDichVu (#PCDATA)>
+<!ELEMENT LoaiDichVu (#PCDATA)>
+<!ELEMENT TrangThai (#PCDATA)>
+
+<!-- Phiếu sửa chữa -->
+<!ELEMENT PhieuSuaChuas (PhieuSuaChua*)>
+<!ELEMENT PhieuSuaChua (MaPhieuID, MaNhanVienID, MaXeMayID)>
+<!ELEMENT MaPhieuID (#PCDATA)>
+
+
+<!-- Chi tiết phiếu sửa chữa -->
+<!ELEMENT ChiTietPhieuSuaChuas (ChiTietPhieuSuaChua*)>
+<!ELEMENT ChiTietPhieuSuaChua (MaPhieuID, TongGiaTri, SoLuongPhuTung, MaPhuTung, MaDichVu)>
+<!ELEMENT TongGiaTri (#PCDATA)>
+<!ELEMENT SoLuongPhuTung (#PCDATA)>
+<!ELEMENT MaPhuTung (#PCDATA)>
+<!ELEMENT MaDichVu (#PCDATA)>

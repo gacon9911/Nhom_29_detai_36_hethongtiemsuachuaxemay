@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.w3schools.com"
+           xmlns="http://www.w3schools.com"
+           elementFormDefault="qualified">
+
+  <!-- ===== Kiểu dữ liệu riêng ===== -->
+  <xs:simpleType name="PhoneNumberType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{10,11}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PositiveMoney">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NonNegativeInt">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="YearType">
+    <xs:restriction base="xs:gYear">
+      <xs:minInclusive value="2000"/>
+      <xs:maxInclusive value="2100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ===== Root ===== -->
+  <xs:element name="Garage">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- ==== KHÁCH HÀNG ==== -->
+        <xs:element name="KhachHangs" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KhachHang" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaKhachHangID" type="xs:string"/>
+                    <xs:element name="Ten" type="xs:string"/>
+                    <xs:element name="SoDienThoai" type="PhoneNumberType"/>
+                    <xs:element name="DiaChi" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== XE MÁY ==== -->
+        <xs:element name="XeMays" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="XeMay" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaXeMayID" type="xs:string"/>
+                    <xs:element name="Hang" type="xs:string"/>
+                    <xs:element name="Mau" type="xs:string"/>
+                    <xs:element name="NamSanXuat" type="YearType"/>
+                    <xs:element name="MaKhachHangID" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== KỸ THUẬT VIÊN ==== -->
+        <xs:element name="KyThuatViens" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KyThuatVien" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaNhanVienID" type="xs:string"/>
+                    <xs:element name="Ten" type="xs:string"/>
+                    <xs:element name="KyNang" type="xs:string"/>
+                    <xs:element name="SoDienThoai" type="PhoneNumberType"/>
+                    <xs:element name="DiaChi" type="xs:string"/>
+                    <xs:element name="MucLuong" type="PositiveMoney"/>
+                    <xs:element name="ViTri" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== PHỤ TÙNG ==== -->
+        <xs:element name="PhuTungXeMays" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PhuTungXeMay" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaPhuTungID" type="xs:string"/>
+                    <xs:element name="MoTa" type="xs:string"/>
+                    <xs:element name="Gia" type="PositiveMoney"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== DỊCH VỤ ==== -->
+        <xs:element name="DichVus" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DichVu" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaDichVuID" type="xs:string"/>
+                    <xs:element name="TenDichVu" type="xs:string"/>
+                    <xs:element name="MoTa" type="xs:string"/>
+                    <xs:element name="Gia" type="PositiveMoney"/>
+                    <xs:element name="LoaiDichVu" type="xs:string"/>
+                    <xs:element name="TrangThai" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== PHIẾU SỬA ==== -->
+        <xs:element name="PhieuSuaChuas" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PhieuSuaChua" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaPhieuID" type="xs:string"/>
+                    <xs:element name="MaNhanVienID" type="xs:string"/>
+                    <xs:element name="MaXeMayID" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- ==== CHI TIẾT PHIẾU ==== -->
+        <xs:element name="ChiTietPhieuSuaChuas" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChiTietPhieuSuaChua" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaPhieuID" type="xs:string"/>
+                    <xs:element name="TongGiaTri" type="PositiveMoney"/>
+                    <xs:element name="SoLuongPhuTung" type="NonNegativeInt"/>
+                    <xs:element name="MaPhuTung" type="xs:string"/>
+                    <xs:element name="MaDichVu" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- ===== RÀNG BUỘC ===== -->
+    <xs:unique name="KhachHang_PK">
+      <xs:selector xpath="KhachHangs/KhachHang"/>
+      <xs:field xpath="MaKhachHangID"/>
+    </xs:unique>
+
+    <xs:unique name="XeMay_PK">
+      <xs:selector xpath="XeMays/XeMay"/>
+      <xs:field xpath="MaXeMayID"/>
+    </xs:unique>
+
+    <xs:unique name="NhanVien_PK">
+      <xs:selector xpath="KyThuatViens/KyThuatVien"/>
+      <xs:field xpath="MaNhanVienID"/>
+    </xs:unique>
+
+    <xs:unique name="PhieuSuaChua_PK">
+      <xs:selector xpath="PhieuSuaChuas/PhieuSuaChua"/>
+      <xs:field xpath="MaPhieuID"/>
+    </xs:unique>
+
+    <xs:unique name="PhuTung_PK">
+      <xs:selector xpath="PhuTungXeMays/PhuTungXeMay"/>
+      <xs:field xpath="MaPhuTungID"/>
+    </xs:unique>
+
+    <xs:unique name="DichVu_PK">
+      <xs:selector xpath="DichVus/DichVu"/>
+      <xs:field xpath="MaDichVuID"/>
+    </xs:unique>
+
+    <!-- ===== KHÓA NGOẠI ===== -->
+    <xs:keyref name="XeMay_KhachHang_FK" refer="KhachHang_PK">
+      <xs:selector xpath="XeMays/XeMay"/>
+      <xs:field xpath="MaKhachHangID"/>
+    </xs:keyref>
+
+    <xs:keyref name="PhieuSua_NhanVien_FK" refer="NhanVien_PK">
+      <xs:selector xpath="PhieuSuaChuas/PhieuSuaChua"/>
+      <xs:field xpath="MaNhanVienID"/>
+    </xs:keyref>
+
+    <xs:keyref name="PhieuSua_XeMay_FK" refer="XeMay_PK">
+      <xs:selector xpath="PhieuSuaChuas/PhieuSuaChua"/>
+      <xs:field xpath="MaXeMayID"/>
+    </xs:keyref>
+
+    <xs:keyref name="ChiTiet_Phieu_FK" refer="PhieuSuaChua_PK">
+      <xs:selector xpath="ChiTietPhieuSuaChuas/ChiTietPhieuSuaChua"/>
+      <xs:field xpath="MaPhieuID"/>
+    </xs:keyref>
+
+    <xs:keyref name="ChiTiet_PhuTung_FK" refer="PhuTung_PK">
+      <xs:selector xpath="ChiTietPhieuSuaChuas/ChiTietPhieuSuaChua"/>
+      <xs:field xpath="MaPhuTung"/>
+    </xs:keyref>
+
+    <xs:keyref name="ChiTiet_DichVu_FK" refer="DichVu_PK">
+      <xs:selector xpath="ChiTietPhieuSuaChuas/ChiTietPhieuSuaChua"/>
+      <xs:field xpath="MaDichVu"/>
+    </xs:keyref>
+
+  </xs:element>
+</xs:schema>
