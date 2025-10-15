@@ -51,4 +51,5 @@
 <!ELEMENT TongGiaTri (#PCDATA)>
 <!ELEMENT SoLuongPhuTung (#PCDATA)>
 <!ELEMENT MaPhuTung (#PCDATA)>
+
 <!ELEMENT MaDichVu (#PCDATA)>
